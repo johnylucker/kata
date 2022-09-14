@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Document</title>
+<link href="style.css" rel="stylesheet"></head>
+
+<body>
+  <div class="container">
+    <input type="checkbox" id="menu-toggle" hidden>
+    <div class="menu-backdrop">
+      <div class="menu">
+        <header class="menu__header">
+          <div class="wrapper">
+            <button class="button button--with-icon menu__button--close button--close">
+              <label class="burger-label" for="menu-toggle"></label>
+            </button>
+            <a class="logo" href="">
+              <img src="./img/logo.svg" alt="logo CPS">
+            </a>
+          </div>
+          <button class="button button--with-icon button--search"></button>
+        </header>
+        <nav class="nav">
+          <ul>
+            <li class="nav__item">
+              <a class="nav__link nav__link--active" href="">Ремонт техники</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="">Услуги и сервисы</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="">Корпоративным клиентам</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="">Продавцам техники</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="">Партнерам</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="">Производителям</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="">Наши сервисные центры</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <footer class="menu__footer">
+          <div class="wrapper-inner">
+            <button class="button button--with-icon button--call" href=""></button>
+            <button class="button button--with-icon button--chat" href=""></button>
+            <button class="button button--with-icon button--profile" href=""></button>
+          </div>
+          <a class="mail-link" href="">mail@cps.com</a>
+          <a class="phone-link" href="">8 800 890 8900</a>
+          <ul class="lang-box">
+            <li>
+              <button class="button lang-box__elem lang-box__elem--current">RU</button>
+            </li>
+            <li>
+              <button class="button lang-box__elem">EN</button>
+            </li>
+            <li>
+              <button class="button lang-box__elem">CH</button>
+            </li>
+          </ul>
+        </footer>
+      </div>
+
+      <label class="burger-label menu-label" for="menu-toggle"></label>
+    </div>
+    <div class="modal modal-message">
+      <button class="button button--with-icon modal__button--close button--close">
+      </button>
+      <h3 class="modal__title">Обратная связь</h3>
+      <form class="form" action="">
+        <input name="text" class="form__input" type="text" placeholder="Имя">
+        <input name="tel" class="form__input" type="tel" placeholder="Телефон">
+        <input name="email" class="form__input" type="email" placeholder="Электронная почта">
+        <textarea name="message" class="form__input form__input--size" placeholder="Сообщение"></textarea>
+        <p class="form__text">Нажимая “отправить”, вы даете согласие на <a class="form__link" href="">обработку персональных данных</a> и соглашаетесь с нашей <a class="form__link" href="">политикой конфиденциальности</a></p>
+        <button type="submit" class="button button--order form__submit">Отправить</button>
+      </form>
+    </div>
+
+    <div class="modal modal-call">
+      <button class="button button--with-icon modal__button--close button--close">
+      </button>
+      <h3 class="modal__title">Заказать звонок</h3>
+      <form class="form" action="">
+        <input name="tel" class="form__input" type="tel" placeholder="Телефон">
+        <p class="form__text">Нажимая “отправить”, вы даете согласие на <a class="form__link" href="">обработку персональных данных</a> и соглашаетесь с нашей <a class="form__link" href="">политикой конфиденциальности</a></p>
+        <button type="submit" class="button button--order form__submit">Отправить</button>
+      </form>
+    </div>
+
+    <main class="main">
+      <div class="">
+        <div class="header__wrapper">
+          <header class="header__top">
+            <div class="wrapper">
+              <button class="button button--with-icon button--burger">
+                <label class="burger-label" for="menu-toggle"></label>
+              </button>
+              <span class="logo-line line"></span>
+              <a class="logo" href="">
+                <img src="./img/logo.svg" alt="logo CPS">
+              </a>
+            </div>
+
+            <div class="wrapper">
+              <div class="wrapper__inner">
+                <button class="button button--with-icon button--call"></button>
+                <button class="button button--with-icon button--chat"></button>
+                <button class="button button--with-icon button--profile"></button>
+              </div>
+              <span class="line"></span>
+              <button class="button button--with-icon button--repair" href=""></button>
+              <button class="button button--with-icon button--check" href=""></button>
+            </div>
+          </header>
+        </div>
+
+        <div class="content">
+          <div class="content__wrapper">
+            <header class="header">
+              <h1 class="title">Услуги и сервисы</h1>
+              <div class="inner-buttons">
+                <label class="button-text">
+                  Оставить заявку
+                  <button class="button button--with-icon button--repair"></button>
+                </label>
+                <label class="button-text">
+                  Статус ремонта
+                  <button class="button button--with-icon button--check"></button>
+                </label>
+              </div>
+            </header>
+            <nav>
+              <ul class="menu-side">
+                <li>
+                  <a class="menu-side__link menu-side__link--active" href="">Ремонтируемые устройства</a>
+                </li>
+                <li>
+                  <a class="menu-side__link" href="">Цены на услуги</a>
+                </li>
+                <li>
+                  <a class="menu-side__link" href="">Адреса сервисных центров</a>
+                </li>
+                <li>
+                  <a class="menu-side__link" href="">Специальные цены</a>
+                </li>
+                <li>
+                  <a class="menu-side__link" href="">Отзывы</a>
+                </li>
+              </ul>
+            </nav>
+
+            <article class="wrapper-content">
+              <div class="article__text">
+                <div class="wrapper-content__text">
+                  <p class="content__text">
+                    Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете
+                    отремонтировать свой ноутбук Dell с официальной гарантией производителя.
+                  </p>
+                  <p class="content__text">
+                    Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое
+                    количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
+                    очередь, советуют нас родным и близким.
+                  </p>
+                  <p class="content__text">
+                    Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое
+                    количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
+                    очередь, советуют нас родным и близким.
+                  </p>
+                </div>
+                <button class="show--button button">
+                  Читать далее
+                </button>
+              </div>
+              <img class="content__img" src="./img/img-adress.png" alt="CPS photo">
+            </article>
+          </div>
+        </div>
+      
+
+      <section class="section">
+        <div class="section__title-wrapper">
+          <h2 class="section__title">Ремонт техники различных брендов</h2>
+        </div>
+        <div class="section__content">
+          <ul class="product-items">
+            <li class="product-item">
+              <a class="product-item__link" href="">
+                <img src="./img/lenovo.png" alt="">
+              </a>
+            </li>
+            <li class="product-item">
+              <a class="product-item__link" href="">
+                <img src="./img/samsung.png" alt="">
+              </a>
+            </li>
+            <li class="product-item">
+              <a class="product-item__link" href="">
+                <img src="./img/apple.png" alt="">
+              </a>
+            </li>
+            <li class="product-item">
+              <a class="product-item__link" href="">
+                <img src="./img/viewsonic.png" alt="">
+              </a>
+            </li>
+            <li class="product-item">
+              <a class="product-item__link" href="">
+                <img src="./img/samsung.png" alt="">
+              </a>
+            </li>
+            <li class="product-item">
+              <a class="product-item__link" href="">
+                <img src="./img/lenovo.png" alt="">
+              </a>
+            </li>
+            <li class="product-item">
+              <a class="product-item__link" href="">
+                <img src="./img/apple.png" alt="">
+              </a>
+            </li>
+            <li class="product-item">
+              <a class="product-item__link" href="">
+                <img src="./img/lenovo.png" alt="">
+              </a>
+            </li>
+            <li class="product-item">
+              <a class="product-item__link" href="">
+                <img src="./img/samsung.png" alt="">
+              </a>
+            </li>
+            <li class="product-item">
+              <a class="product-item__link" href="">
+                <img src="./img/apple.png" alt="">
+              </a>
+            </li>
+            <li class="product-item">
+              <a class="product-item__link" href="">
+                <img src="./img/lenovo.png" alt="">
+              </a>
+            </li>
+          </ul>
+          <button class="button show--button">
+            Показать все
+          </button>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__title-wrapper">
+          <h2 class="section__title">Ремонт различных видов техники</h2>
+        </div>
+        <div class="section__content">
+          <ul class="product-items">
+            <li class="product-item">
+              <a class="product-item__link-repair" href="">
+                Ремонт ноутбуков
+              </a>
+            </li>
+            <li class="product-item">
+              <a class="product-item__link-repair" href="">
+                Ремонт планшетов
+              </a>
+            </li>
+            <li class="product-item">
+              <a class="product-item__link-repair" href="">
+                Ремонт ПК
+              </a>
+            </li>
+            <li class="product-item">
+              <a class="product-item__link-repair" href="">
+                Ремонт мониторов
+              </a>
+            </li>
+            <li class="product-item">
+              <a class="product-item__link-repair" href="">
+                Ремонт ноутбуков
+              </a>
+            </li>
+            <li class="product-item">
+              <a class="product-item__link-repair" href="">
+                Ремонт ноутбуков
+              </a>
+            </li>
+            <li class="product-item">
+              <a class="product-item__link-repair" href="">
+            Ремонт ноутбуков
+              </a>
+            </li>
+            <li class="product-item">
+              <a class="product-item__link-repair" href="">
+              Ремонт ноутбуков
+              </a>
+            </li>
+            <li class="product-item">
+              <a class="product-item__link-repair" href="">
+                Ремонт ноутбуков
+              </a>
+            </li>
+            <li class="product-item">
+              <a class="product-item__link-repair" href="">
+            Ремонт ноутбуков
+              </a>
+            </li>
+            <li class="product-item">
+              <a class="product-item__link-repair" href="">
+              Ремонт ноутбуков
+              </a>
+            </li>
+          </ul>
+          <button class="button show--button">
+            Показать все
+          </button>
+        </div>
+      </section>
+    </div></main>
+  </div>
+  
+<script type="text/javascript" src="./js/bundle.js"></script></body>
+
+</html>
