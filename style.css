@@ -981,7 +981,8 @@ label > .button--repair, label > .button--check {
 
 @media (min-width: 1366px) {
   .modal {
-    padding: 40px 32px 75px 32px; }
+    padding: 40px 32px 75px 32px;
+    max-width: 304px; }
   .modal__title:before {
     right: 32px; } }
 
