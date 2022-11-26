@@ -445,7 +445,7 @@ label > .button--repair, label > .button--check {
 .line {
   height: 32px;
   border-left: 2px solid #EAEAEA;
-  margin-right: 20px; }
+  margin-right: 10px; }
 
 .logo-line {
   display: none; }
@@ -510,7 +510,8 @@ label > .button--repair, label > .button--check {
 
 .wrapper-content {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  align-items: flex-start; }
 
 .article__text {
   width: 50%;
@@ -537,7 +538,10 @@ label > .button--repair, label > .button--check {
 .menu {
   max-width: 360px;
   background-color: #FFFFFF;
-  padding: 18px 16px 18px 16px; }
+  padding: 18px 16px 18px 16px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; }
 
 .menu__header {
   display: flex;
@@ -548,11 +552,8 @@ label > .button--repair, label > .button--check {
 .search {
   margin-right: 0; }
 
-.nav {
-  margin-bottom: 226px; }
-
 .nav__item {
-  margin-bottom: 32px; }
+  margin-bottom: 24px; }
   .nav__item:last-child {
     margin-bottom: 0; }
 
@@ -572,6 +573,9 @@ label > .button--repair, label > .button--check {
     position: absolute;
     left: -16px;
     bottom: -5px; }
+
+.menu__footer {
+  margin-top: auto; }
 
 .menu-label {
   z-index: -1; }
@@ -777,12 +781,18 @@ label > .button--repair, label > .button--check {
 @media (min-width: 1366px) {
   .header__wrapper {
     display: none; }
+  .modal__button--close {
+    position: absolute;
+    left: -73px;
+    top: 38px; }
   .inner-buttons {
     display: flex; }
   .content__wrapper {
     padding-left: 34px;
     padding-right: 34px;
-    padding-top: 42px; } }
+    padding-top: 42px; }
+  .menu {
+    padding: 32px 24px 32px 24px; } }
 
 @media (max-width: 1366px) {
   .container {
@@ -884,6 +894,10 @@ label > .button--repair, label > .button--check {
   .wrapper__inner {
     display: none; } }
 
+@media (max-width: 350px) {
+  .deal-link {
+    width: 200px; } }
+
 @media (min-width: 538px) {
   .logo-line {
     display: inline-block; } }
@@ -899,8 +913,8 @@ label > .button--repair, label > .button--check {
     transition: 0.8s; }
 
 .modal {
-  max-width: 440px;
-  padding: 40px 32px 75px 32px;
+  max-width: 304px;
+  padding: 24px 16px 24px 16px;
   background-color: #FFFFFF;
   height: 100vh;
   position: absolute;
@@ -908,10 +922,21 @@ label > .button--repair, label > .button--check {
   z-index: 3;
   box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2); }
 
+.modal__button--close {
+  margin-bottom: 32px; }
+
 .modal__title {
   font-size: 24px;
   font-family: 'TT Lakes';
-  font-weight: bold; }
+  font-weight: bold;
+  margin-bottom: 24px; }
+  .modal__title::before {
+    content: "";
+    border-left: 3px solid #41F6D7;
+    height: 1.5em;
+    border-radius: 2px;
+    position: relative;
+    right: 16px; }
 
 .form__input {
   min-width: 288px;
@@ -953,6 +978,12 @@ label > .button--repair, label > .button--check {
 .form__submit {
   position: absolute;
   right: 16px; }
+
+@media (min-width: 1366px) {
+  .modal {
+    padding: 40px 32px 75px 32px; }
+  .modal__title:before {
+    right: 32px; } }
 
 
 /*# sourceMappingURL=style.css.map*/
