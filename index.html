@@ -76,33 +76,38 @@
 
       <label class="burger-label menu-label" for="menu-toggle"></label>
     </div>
-    <div class="modal modal-message">
-      <button class="button button--with-icon modal__button--close button--close">
-      </button>
-      <h3 class="modal__title">Обратная связь</h3>
-      <form class="form" action="">
-        <input name="text" class="form__input" type="text" placeholder="Имя">
-        <input name="tel" class="form__input" type="tel" placeholder="Телефон">
-        <input name="email" class="form__input" type="email" placeholder="Электронная почта">
-        <textarea name="message" class="form__input form__input--size" placeholder="Сообщение"></textarea>
-        <p class="form__text">Нажимая “отправить”, вы даете согласие на <a class="form__link" href="">обработку персональных данных</a> и соглашаетесь с нашей <a class="form__link" href="">политикой конфиденциальности</a></p>
-        <button type="submit" class="button button--order form__submit">Отправить</button>
-      </form>
-    </div>
 
-    <div class="modal modal-call">
-      <button class="button button--with-icon modal__button--close button--close">
-      </button>
-      <h3 class="modal__title">Заказать звонок</h3>
-      <form class="form" action="">
-        <input name="tel" class="form__input" type="tel" placeholder="Телефон">
-        <p class="form__text">Нажимая “отправить”, вы даете согласие на <a class="form__link" href="">обработку персональных данных</a> и соглашаетесь с нашей <a class="form__link" href="">политикой конфиденциальности</a></p>
-        <button type="submit" class="button button--order form__submit">Отправить</button>
-      </form>
-    </div>
+    <aside class="modal-wrapper modal-message">
+      <div class="modal">
+        <button class="button button--with-icon modal__button--close button--close">
+        </button>
+        <h3 class="modal__title">Обратная связь</h3>
+        <form class="form" action="">
+          <input name="text" class="form__input" type="text" placeholder="Имя">
+          <input name="tel" class="form__input" type="tel" placeholder="Телефон">
+          <input name="email" class="form__input" type="email" placeholder="Электронная почта">
+          <textarea name="message" class="form__input form__input--size" placeholder="Сообщение"></textarea>
+          <p class="form__text">Нажимая “отправить”, вы даете согласие на <a class="form__link" href="">обработку персональных данных</a> и соглашаетесь с нашей <a class="form__link" href="">политикой конфиденциальности</a></p>
+          <button type="submit" class="button button--order form__submit">ОТПРАВИТЬ</button>
+        </form>
+      </div>
+    </aside>
 
-    <main class="main">
-      <div class="">
+    <aside class="modal-wrapper modal-call">
+      <div class="modal">
+        <button class="button button--with-icon modal__button--close button--close">
+        </button>
+        <h3 class="modal__title">Заказать звонок</h3>
+        <form class="form" action="">
+          <input name="tel" class="form__input" type="tel" placeholder="Телефон">
+          <p class="form__text">Нажимая “отправить”, вы даете согласие на <a class="form__link" href="">обработку персональных данных</a> и соглашаетесь с нашей <a class="form__link" href="">политикой конфиденциальности</a></p>
+          <button type="submit" class="button button--order form__submit">ОТПРАВИТЬ</button>
+        </form>
+      </div>
+    </aside>
+
+    <div class="">
+      <main class="main">
         <div class="header__wrapper">
           <header class="header__top">
             <div class="wrapper">
@@ -195,8 +200,8 @@
         <div class="section__title-wrapper">
           <h2 class="section__title">Ремонт техники различных брендов</h2>
         </div>
-        <div class="section__content">
-          <ul class="product-items">
+        <div class="section__content swiper" data-mobile="false">
+          <ul class="product-items swiper-wrapper">
             <li class="product-item">
               <a class="product-item__link" href="">
                 <img src="./img/lenovo.png" alt="">
@@ -253,7 +258,8 @@
               </a>
             </li>
           </ul>
-          <button class="button show--button">
+          <div class="swiper-pagination"></div>
+          <button class="button show--button button--mobile">
             Показать все
           </button>
         </div>
@@ -263,8 +269,8 @@
         <div class="section__title-wrapper">
           <h2 class="section__title">Ремонт различных видов техники</h2>
         </div>
-        <div class="section__content">
-          <ul class="product-items">
+        <div class="section__content swiper" data-mobile="false">
+          <ul class="product-items swiper-wrapper">
             <li class="product-item">
               <a class="product-item__link-repair" href="">
                 Ремонт ноутбуков
@@ -321,14 +327,109 @@
               </a>
             </li>
           </ul>
-          <button class="button show--button">
+          <div class="swiper-pagination"></div>
+          <button class="button show--button button--mobile">
             Показать все
           </button>
         </div>
       </section>
-    </div></main>
-  </div>
-  
-<script type="text/javascript" src="./js/bundle.js"></script></body>
 
+      <section class="section">
+        <div class="section__title-wrapper">
+          <h2 class="section__title">Цены на услуги</h2>
+        </div>
+        <div class="section__content-wrapper">
+          <div class="section__content section__content--price swiper" data-mobile="false">
+            <div class="subtitles">
+              <h3 class="subtitle subtitles__first">Ремонтные услуги</h3>
+              <h3 class="subtitle subtitles__second">Цена</h3>
+              <h3 class="subtitle subtitles__third">Срок</h3>
+            </div>
+            <ul class="product-items product-items--price swiper-wrapper">
+              <li class="product-item">
+                <div class="product-item__box">
+                  <h3 class="subtitle subtitle--mobile">Ремонтные услуги</h3>
+                  <p class="price-text">Диагностика</p>
+                  <h3 class="subtitle subtitle--mobile">Цена</h3>
+                  <p class="price-text">Бесплатно</p>
+                  <h3 class="subtitle subtitle--mobile">Срок</h3>
+                  <div class="product-item__inner">
+                    <p class="price-text">30 мин</p>
+                    <button class="button button--order">ЗАКАЗАТЬ</button>
+                  </div>
+                </div>
+              </li>
+              <li class="product-item">
+                <div class="product-item__box">
+                  <h3 class="subtitle subtitle--mobile">Ремонтные услуги</h3>
+                  <p class="price-text">Замена дисплея</p>
+                  <h3 class="subtitle subtitle--mobile">Цена</h3>
+                  <p class="price-text">1 000 ₽</p>
+                  <h3 class="subtitle subtitle--mobile">Срок</h3>
+                  <div class="product-item__inner">
+                    <p class="price-text">30-120 мин</p>
+                    <button class="button button--order">ЗАКАЗАТЬ</button>
+                  </div>
+                </div>
+              </li>
+              <li class="product-item">
+                <div class="product-item__box">
+                  <h3 class="subtitle subtitle--mobile">Ремонтные услуги</h3>
+                  <p class="price-text">Замена полифонического динамика</p>
+                  <h3 class="subtitle subtitle--mobile">Цена</h3>
+                  <p class="price-text">1 000 ₽</p>
+                  <h3 class="subtitle subtitle--mobile">Срок</h3>
+                  <div class="product-item__inner">
+                    <p class="price-text">30-120 мин</p>
+                    <button class="button button--order">ЗАКАЗАТЬ</button>
+                  </div>
+                </div>
+              </li>
+              <li class="product-item">
+                <div class="product-item__box">
+                  <h3 class="subtitle subtitle--mobile">Ремонтные услуги</h3>
+                  <p class="price-text">Тестирование с выдачей технического заключения</p>
+                  <h3 class="subtitle subtitle--mobile">Цена</h3>
+                  <p class="price-text">1 000 ₽</p>
+                  <h3 class="subtitle subtitle--mobile">Срок</h3>
+                  <div class="product-item__inner">
+                    <p class="price-text">30-120 мин</p>
+                    <button class="button button--order">ЗАКАЗАТЬ</button>
+                  </div>
+                </div>
+              </li>
+              <li class="product-item">
+                <div class="product-item__box">
+                  <h3 class="subtitle subtitle--mobile">Ремонтные услуги</h3>
+                  <p class="price-text">Замена программного обеспечения</p>
+                  <h3 class="subtitle subtitle--mobile">Цена</h3>
+                  <p class="price-text">1 000 ₽</p>
+                  <h3 class="subtitle subtitle--mobile">Срок</h3>
+                  <div class="product-item__inner">
+                    <p class="price-text">30-120 мин</p>
+                    <button class="button button--order">ЗАКАЗАТЬ</button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="swiper-pagination"></div>
+          </div>
+          <p class="summary">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.
+          </p>
+          <a class="deal-link" href="">Получить коммерческое предложение</a>
+        </div>
+      </section>
+      </main>
+      <footer class="footer">
+        <div class="footer-box">
+          <p class="footer__text">© 2019 CPS</p>
+          <p class="footer__text">Разработано командой Apesong</p>
+        </div>
+        <p class="footer__text">Политика конфиденциальности</p>
+        <p class="footer__text">Информация, размещенная на данной странице, не является публичной офертой</p>
+      </footer>
+    </div>
+
+  </div>
+<script type="text/javascript" src="./js/bundle.js"></script></body>
 </html>
